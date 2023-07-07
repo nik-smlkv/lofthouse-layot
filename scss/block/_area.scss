@@ -1,0 +1,15 @@
+.area {
+	margin: 0px 0px 180px 0px;
+	padding: 0px 20px;
+}
+.area__title {
+	margin: 0px 0px 88px 0px;
+	> h4 {
+		@include style__text(36px, $text, $font-accent);
+	}
+}
+
+.content__map {
+	min-height: 358px;
+	background-color: #626262;
+}

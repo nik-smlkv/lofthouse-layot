@@ -1,0 +1,138 @@
+.header {
+	min-height: 840px;
+	margin: 30px 0px 74px 0px;
+	display: flex;
+	background: linear-gradient(180deg, #242b33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242b33 92.19%),
+		url("/img/header/header-bg.jpg"), lightgray 50% / cover no-repeat;
+	padding: 0px 20px;
+}
+
+[class*="__container"] {
+	max-width: 1039px;
+	margin: 0 auto;
+}
+
+.header__container {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+	justify-content: space-between;
+}
+
+.header__body {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header__body--mobile {
+	position: fixed;
+	z-index: 9;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: $dark;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	row-gap: 60px;
+
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	.header__menu {
+		display: block;
+	}
+
+	.menu__list {
+		flex-direction: column;
+		align-items: center;
+		row-gap: 30px;
+		margin: 0px 30px 0px 0px;
+	}
+
+	.header__nav-btn {
+		position: fixed;
+		top: 50px;
+		right: 15px;
+	}
+}
+
+.header__menu {
+	@include mediaTablet {
+		display: none;
+	}
+}
+
+.header__nav-btn {
+	display: none;
+	@include mediaTablet {
+		display: block;
+	}
+}
+
+.menu__list {
+	display: flex;
+}
+
+.menu__item {
+	margin: 0px 0px 0px 32px;
+}
+
+.menu__link {
+	@include style__text(14px, $white, $font-main);
+	color: $white;
+	transition: color 0.2s ease-in;
+	&:hover {
+		color: $text;
+	}
+}
+
+.block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.block__text {
+	text-align: center;
+	margin: 0px 0px 81px 0px;
+	> h1 {
+		@include style__text(48px, $text, $font-accent);
+		@include mediaTablet {
+			font-size: 32px;
+			padding-bottom: 100px;
+	  }
+	}
+
+}
+
+
+.header__info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@include mediaTablet {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 30px;
+  }
+}
+.info {
+	p {
+		@include style__text(18px, $white, $font-main);
+	}
+}
+.info__address {
+	margin: 0px 48.5px 0px 0px;
+	background: url("/img/header/placeholder.svg") no-repeat left;
+	padding: 5px 0px 5px 35px;
+}
+.info__phone {
+	margin: 0px 80px 0px 48.5px;
+	background: url("/img/header/phone-call.svg") no-repeat left;
+	padding: 5px 0px 5px 35px;
+}

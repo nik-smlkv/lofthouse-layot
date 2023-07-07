@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&family=Roboto:wght@300&display=swap");
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	background-color: $background;
+}
+
+.main {
+	flex: 1 1 auto;
+}

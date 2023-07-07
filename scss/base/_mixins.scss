@@ -1,0 +1,30 @@
+//Mixin for a style text
+@mixin style__text($font-size, $color, $ff) {
+	font-size: $font-size;
+	color: $color;
+	font-family: $ff;
+}
+
+//Mixin for the footer style text 
+@mixin style__text-footer($font-size, $color, $ff, $ls) {
+	font-size: $font-size;
+	color: $color;
+	font-family: $ff;
+	letter-spacing: $ls;
+}
+
+//Mixin for style form
+@mixin style__form() {
+	width: 250px;
+	height: 50px;
+	background: $white;
+	opacity: 0.2;
+	text-align: center;
+}
+
+//Mixin for a media request
+@mixin mediaTablet {
+	@media screen and (max-width: $tablet) {
+		@content;
+	}
+}

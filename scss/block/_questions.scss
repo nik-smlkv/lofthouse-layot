@@ -1,0 +1,44 @@
+.questions {
+	margin: 0px 0px 180px 0px;
+	padding: 0px 20px;
+}
+
+.questions__title {
+	margin: 0px 0px 38px 0px;
+	> h5 {
+		@include style__text(36px, $text, $font-accent);
+		@include mediaTablet {
+			text-align: center;
+		}
+	}
+}
+.questions__form {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	@include mediaTablet {
+		justify-content: space-around;
+		margin: 0px 0px 50px 0px;
+	}
+}
+
+.writing {
+	margin: 0px;
+}
+
+.submit {
+	margin: 0;
+}
+
+.form__button {
+	cursor: pointer;
+	transition: 0.5s;
+	&:hover{
+		opacity: 0.7;
+	}
+}
+.button {
+	margin: 0px 0px 0px 0px;
+	cursor: pointer;
+}

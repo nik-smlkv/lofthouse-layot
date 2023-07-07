@@ -1,0 +1,120 @@
+[class*="__container"] {
+	max-width: 1110px;
+	margin: 0 auto;
+}
+
+.watching {
+	min-height: 560px;
+	padding: 0px 20px;
+	background: linear-gradient(180deg, #242b33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242b33 92.19%),
+		url("/img/watching/watching-bg.jpg"), lightgray 50% / cover no-repeat;
+	display: flex;
+	align-items: center;
+}
+
+.watching__container {
+	display: flex;
+	flex-direction: row;
+	flex: 1 1 auto;
+	justify-content: space-between;
+}
+
+.watching__content {
+	display: flex;
+	justify-content: space-between;
+	flex: 1 1 auto;
+	@include mediaTablet {
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0px 0px 50px 0px;
+	}
+}
+
+.title {
+	margin: 0px 0px 17px 0px;
+	> h3 {
+		@include style__text(36px, $text, $font-accent);
+	}
+}
+
+.watching__text {
+	> p {
+		@include style__text(16px, $white, $font-main);
+		line-height: 24px;
+	}
+}
+
+.watching__form {
+	display: flex;
+	flex-wrap: wrap;
+	@include mediaTablet {
+		flex-direction: column;
+		justify-content: center;
+		row-gap: 20px;
+	}
+}
+
+.form {
+	margin: 55px 0px 0px 0px;
+}
+
+.form__name {
+	outline: none;
+	margin: 0px 30px 0px 0px;
+	@include style__form();
+	&::placeholder {
+		color: #737373;
+		opacity: 1;
+		font-weight: 400;
+	}
+}
+
+.form__number {
+	outline: none;
+	@include style__form();
+	&::placeholder {
+		color: #737373;
+		opacity: 1;
+		font-weight: 400;
+	}
+}
+
+.form__text {
+	width: 250px;
+	text-align: center;
+	> p {
+		@include style__text(13px, $white, $font-main);
+		line-height: 16px;
+	}
+}
+.form__button {
+	margin: 0px 0px 0px 30px;
+	width: 250px;
+	height: 50px;
+	background: $text;
+	> p {
+		@include style__text(16px, $white, $font-main);
+		font-weight: 700;
+	}
+	@include mediaTablet {
+		margin: 0px 0px 0px 0px;
+	}
+}
+
+.form__writing {
+	display: flex;
+	margin: 0px 0px 30px 30px;
+	@include mediaTablet {
+		flex-direction: column;
+		row-gap: 20px;
+	}
+}
+
+.form__submit {
+	margin: 0px 0px 0px 30px;
+	display: flex;
+	@include mediaTablet {
+		flex-direction: column;
+		row-gap: 20px;
+	}
+}
